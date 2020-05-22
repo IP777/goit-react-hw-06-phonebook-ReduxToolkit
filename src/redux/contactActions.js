@@ -1,22 +1,5 @@
-import { Type } from "./type";
+import { createAction } from "@reduxjs/toolkit";
 
-//Тип в виде обьекта
-export const addContactArray = (arr) => ({
-	type: Type.ADD_CONTACT,
-	payload: arr,
-});
-
-export const removeContact = (id) => ({
-	type: Type.REMOVE_CONTACT,
-	payload: id,
-});
-
-export const addFilter = (string) => ({
-	type: Type.ADD_FILTER,
-	payload: string,
-});
-
-export const alertToggle = (bool) => ({
-	type: Type.ALERT_TOGGLE,
-	payload: bool,
-});
+export const addContactArray = createAction("type/ADD_CONTACT");
+export const removeContact = createAction("type/REMOVE_CONTACT");
+export const addFilter = createAction("type/ADD_FILTER");
